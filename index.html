@@ -39,19 +39,29 @@
         </div>
     </div>
 
+
+    <div class="p-5 m-5 bg-secondary text-center">
+        <h1 ><span class="welcome-text">THANK YOU</span></h1>
+    </div>
+
+
     <script>
         var container = document.getElementById("container");
         data = "";
         var videoCount = 5;
         for (var i = 0; i <= videoCount; i++) {
             data += `
-                <div class="col-md-4 bg-primary">
-                        <div class="card" >
-                            <div class="card-body">
-                                <video src="${i}_Web_Designing.mp4" class="img-fluid" controls></video>
+                <div class="col-md-4 my-3">
+                    <div class="card">
+                        <div class="card-body position-relative">
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                ${i}
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                            <video src="${i}_Web_Designing.mp4" class="img-fluid" controls></video>
                             </div>
                         </div>
-                    </div>        `;
+                    </div>`;
         }
         container.innerHTML = data;
     </script>
